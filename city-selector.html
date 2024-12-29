@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztráció</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h1 {
+            text-align: center;
+            color: #DAA520;
+            margin-bottom: 20px;
+        }
+
+        .form-container p {
+            text-align: center;
+            color: #DAA520;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="number"],
+        .form-group textarea,
+        .form-group select {
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 14px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: #DAA520;
+            color: white;
+            display: block;
+            box-sizing: border-box;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: 2px solid #c29515;
+        }
+
+        .checkbox-group {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #DAA520;
+            border-radius: 4px;
+            margin-right: 10px;
+            cursor: pointer;
+            background-color: #f9f9f9;
+        }
+
+        .checkbox-group input[type="checkbox"]:checked {
+            background-color: #DAA520;
+            border-color: #DAA520;
+        }
+
+        .file-upload {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            border: 1px dashed #DAA520;
+            border-radius: 5px;
+            padding: 15px;
+            color: #DAA520;
+            text-align: center;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .file-upload:hover {
+            border-color: #c29515;
+            color: #c29515;
+        }
+
+        button {
+            display: block;
+            width: 90%;
+            max-width: 600px;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #DAA520;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px auto 0;
+        }
+
+        button:hover {
+            background-color: #c29515;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Regisztráció</h1>
+        <p>(INGYENES 5 perc)</p>
+
+        <form id="registrationForm">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Név (Saját vagy kitalált becenév)" required>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email cím" required>
+            </div>
+
+            <div class="form-group">
+                <textarea id="introduction" name="introduction" rows="4" placeholder="Bemutatkozás"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="phone" name="phone" placeholder="Telefonszám">
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="age" name="age" min="18" max="99" placeholder="Életkor">
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="height" name="height" min="100" max="250" placeholder="Magasság (cm)">
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="weight" name="weight" min="30" max="200" placeholder="Súly (Kg)">
+            </div>
+
+            <div class="form-group">
+                <select id="body_type" name="body_type">
+                    <option value="" disabled selected>Testalkat*</option>
+                    <option value="karcsu">Karcsú</option>
+                    <option value="atlagos">Átlagos</option>
+                    <option value="telt">Telt</option>
+                    <option value="kerekded">Kerekded</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="city" name="city" placeholder="Város">
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="county" name="county" placeholder="Megye">
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="zip" name="zip" placeholder="Irányítószám">
+            </div>
+
+            <p>(Csak a város helye, kerülete kerül közétéve)</p>
+
+            <div class="form-group">
+                <label>Szolgáltatásaim*</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="services" value="Aktus (csak óvszerrel)"> Aktus (csak óvszerrel)</label>
+                    <label><input type="checkbox" name="services" value="Francia óvszerrel"> Francia óvszerrel</label>
+                    <label><input type="checkbox" name="services" value="Natúr francia végén szájba"> Natúr francia végén szájba</label>
+                    <label><input type="checkbox" name="services" value="Natúr francia végén testre"> Natúr francia végén testre</label>
+                    <label><input type="checkbox" name="services" value="Mélytorkos"> Mélytorkos</label>
+                    <label><input type="checkbox" name="services" value="Kölcsönös francia"> Kölcsönös francia</label>
+                    <label><input type="checkbox" name="services" value="Masszázs"> Masszázs</label>
+                    <label><input type="checkbox" name="services" value="BDSM"> BDSM</label>
+                    <label><input type="checkbox" name="services" value="Vibrátoros játék"> Vibrátoros játék</label>
+                    <label><input type="checkbox" name="services" value="Közös pornófilm nézés"> Közös pornófilm nézés</label>
+                    <label><input type="checkbox" name="services" value="Szerepjátékok"> Szerepjátékok</label>
+                    <label><input type="checkbox" name="services" value="Kézi levezetés"> Kézi levezetés</label>
+                    <label><input type="checkbox" name="services" value="Taposás, kínzás (CBT)"> Taposás, kínzás (CBT)</label>
+                </div>
+                <p style="margin-top: 10px;">pipáld be amit válalsz</p>
+            </div>
+            
+            <div class="form-group">
+                <label>Hol válalsz szolgáltatást?*</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="location" value="nálam"> nálam</label>
+                    <label><input type="checkbox" name="location" value="nálad"> nálad</label>
+                    <label><input type="checkbox" name="location" value="kocsiba"> kocsiba</label>
+                </div>
+            </div>
+            
+            <div class="form-group file-upload">
+                <label for="images">Kattints a képek feltöltéséhez</label>
+                <input type="file" id="images" name="images" multiple>
+            </div>
+            
+
+            <button type="submit">Regisztráció</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = {};
+
+            formData.forEach((value, key) => {
+                if (data[key]) {
+                    if (!Array.isArray(data[key])) {
+                        data[key] = [data[key]];
+                    }
+                    data[key].push(value);
+                } else {
+                    data[key] = value;
+                }
+            });
+
+            const webhookUrl = "https://hooks.zapier.com/hooks/catch/20825039/2sw09rs/";
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                if (response.ok) {
+                    alert("Adatok sikeresen elküldve!");
+                } else {
+                    alert("Hiba történt az elküldés során.");
+                }
+            } catch (error) {
+                alert("Hálózati hiba történt.");
+            }
+        });
+    </script>
+</body>
+</html>
