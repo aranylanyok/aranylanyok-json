@@ -1,4 +1,8 @@
 {
+  "Baranya": [
+    "Abaliget (1)",
+    "Ág (1)"
+  ],
   "Borsod-Abaúj-Zemplén": [
     "Bózsva (1)",
     "Miskolc (4)",
@@ -39,8 +43,5 @@
   ],
   "Pest megye": [
     "Abony (1)"
-  ],
-  "Baranya": [
-    "Ág (1)"
   ]
 }
