@@ -22,6 +22,11 @@
     "IV. kerület (4)",
     "V. kerület (1)"
   ],
+  "Bács-Kiskun": [
+    "Kecskemét (1)",
+    "Ágasegyháza (1)",
+    "Bácsalmás (2)"
+  ],
   "Csongrád-Csanád": [
     "Árpádhalom (1)"
   ],
@@ -31,10 +36,6 @@
     "Battonya (2)",
     "Geszt (1)",
     "Békéssámson (1)"
-  ],
-  "Bács-Kiskun": [
-    "Ágasegyháza (1)",
-    "Bácsalmás (2)"
   ],
   "Jász-Nagykun-Szolnok": [
     "Berekfürdő (1)"
