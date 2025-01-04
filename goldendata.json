@@ -13,6 +13,11 @@
     "Sárospatak (1)",
     "Viss (1)"
   ],
+  "Budapest": [
+    "IV. kerület (3)",
+    "III. kerület (1)",
+    "V. kerület (1)"
+  ],
   "Békés": [
     "Battonya (1)",
     "Békés (1)",
@@ -27,11 +32,6 @@
   ],
   "null": [
     "null (2)"
-  ],
-  "Budapest": [
-    "IV. kerület (1)",
-    "III. kerület (1)",
-    "V. kerület (1)"
   ],
   "Bács-Kiskun": [
     "Ágasegyháza (1)"
