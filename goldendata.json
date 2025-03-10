@@ -1,4 +1,11 @@
 {
+  "Budapest": [
+    "VI. kerület (1)",
+    "XVIII. kerület (2)",
+    "III. kerület (1)",
+    "VII. kerület (3)",
+    "XI. kerület (1)"
+  ],
   "Tolna": [
     "Tamási (1)"
   ],
@@ -6,12 +13,6 @@
     "Miskolc (3)",
     "Kenézlő (1)",
     "Kazincbarcika (1)"
-  ],
-  "Budapest": [
-    "XVIII. kerület (2)",
-    "III. kerület (1)",
-    "VII. kerület (3)",
-    "XI. kerület (1)"
   ],
   "Szabolcs-Szatmár-Bereg": [
     "Bököny (1)",
